@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uexplugins>
+     <plugin
+        className="com.tmf.plugin.uexsidemenu.EUExSideMenu" 
+        
+        uexName="uexSideMenu" >
+        <method name="open" />
+        <method name="close" />
+        <method name="setItems" />
+        
+       
+    </plugin>
+</uexplugins>

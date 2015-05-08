@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, user-scalable=no" />
+<!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+<title>PathArcMenu</title>
+<script type="text/javascript">
+    window.uexOnload = function() {
+		uexWidgetOne.onError = function(opCode, errorCode, errorDesc) {
+			alert(errorCode + ":" + errorDesc);
+		}
+	}
+    function createMenu(){
+        uexSideMenu.onItemClick = itemClickCallback;
+        uexSideMenu.open('0','0','320','256');
+    }
+    function addMenuItems(){
+        var param = {
+        	menuItems:[
+        		{item:
+        			{	buttonImg:"res://s1.png",
+        				bgImg:"res://s1.png"
+        			}
+        		},
+        		{item:
+        			{	buttonImg:"res://s2.png",
+        				bgImg:"res://s2.png"
+        			}
+        		},
+        		{item:
+        			{	buttonImg:"res://s3.png",
+        				bgImg:"res://s3.png"
+        			}
+        		},
+        		{item:
+        			{	buttonImg:"res://s4.png",
+        				bgImg:"res://s4.png"
+        			}
+        		},
+        		{item:
+        			{	buttonImg:"res://s5.png",
+        				bgImg:"res://s5.png"
+        			}
+        		}]
+        		};
+        
+        uexSideMenu.setItems(param);
+    }
+    function itemClickCallback(data){
+        alert("回掉成功,item = "+data);
+    }
+    function closeMenu(){
+        uexSideMenu.close();
+    }
+    
+</script>
+</head>
+
+<body>
+	<div class="tit">Demo</div>
+        <div class="conbor">
+            <div class="consj">
+                <input class="btn" type="button" value="设置menuitems" onclick="addMenuItems();"/>
+                <input class="btn" type="button" value="打开Demo" onclick="createMenu();"/>
+                <input class="btn" type="button" value="关闭" onclick="closeMenu();"/>
+                <input class="btn" type="button" value="返回" onclick="uexWindow.close();"/>
+            </div>
+        </div>
+</body>
+</html>
