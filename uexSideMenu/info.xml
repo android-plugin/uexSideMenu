@@ -2,6 +2,6 @@
 <uexplugins>
 <plugin
      uexName="uexSideMenu" version="3.0.0" build="0">
-<info>build 0:插件开发uexSideMenu</info>
+     <build>0:侧边菜单插件</build>
 </plugin>
 </uexplugins>
